@@ -1,0 +1,85 @@
+.chat-container {
+  width: 70%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 5px 12px #ddd, -3px -5px 12px #ddd;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.messages {
+  width: 100%;
+  height: 92%;
+  background: url(../../images/background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+  overflow-y: scroll;
+}
+.messages::-webkit-scrollbar {
+  appearance: none;
+  width: 10px;
+  height: 100vh;
+}
+.messages::-webkit-scrollbar-thumb {
+  width: 100%;
+  border-radius: 15px;
+  background: rgb(151, 151, 151);
+}
+.send {
+  width: 100%;
+  height: 8%;
+  background: rgb(247, 241, 241);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.send input[type="text"] {
+  width: 93%;
+  height: 90%;
+  border-radius: 15px;
+  border: none;
+  background: rgb(228, 225, 225);
+  padding: 2%;
+  font-size: 120%;
+}
+.send svg {
+  color: rgb(148, 140, 140);
+  cursor: pointer;
+}
+.messages div {
+  position: relative;
+  font-size: 170%;
+  width: fit-content;
+  background: #fff;
+  padding: 10px 10px 20px 10px;
+  border-radius: 15px;
+  font-family: "iransans";
+}
+.messages [type="recive"] {
+  align-self: flex-start;
+  background: rgb(182, 174, 174);
+}
+.messages [type="send"] {
+  align-self: flex-end;
+}
+.messages div span {
+  position: absolute;
+  bottom: 3%;
+  left: 10%;
+  font-size: 13px;
+  color: gray;
+}
+aside.emoji-picker-react {
+  width: 100%;
+  height: 30%;
+}
